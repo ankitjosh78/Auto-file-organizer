@@ -18,7 +18,7 @@ def file_move(folder_name,files): # moves the files to their respective folders
 
 if __name__ == "__main__":   
 
-    #You can customize the extensions and add more . I added the most used ones.add()
+    #You can customize the extensions and add more . I added the most used ones.
 
     img_extensions=['png','jpeg','jpg','gif','tiff','psd','ai','raw']
     
