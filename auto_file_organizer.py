@@ -28,12 +28,12 @@ if __name__ == "__main__":
 
     web_extensions=['css','html','htm','json','js','php']
 
-    doc_extensions=['pdf','docx','doc','xml','ppt','word','xlsx','txt']
+    doc_extensions=['pdf','docx','doc','xml','ppt','word','xlsx','txt','cc','c++','cpp','py']
 
-
+    dot_extensions=['']
     #Time to get the actual files
 
-    image_files=[files for files in file_names if os.path.splitext(files)[1][1:].lower() in img_extensions]
+    image_files=[files for files in ile_names if os.path.splitext(files)[1][1:].lower() in img_extensions]
 
     audio_files=[files for files in file_names if os.path.splitext(files)[1][1:].lower() in audio_extensions]
 
@@ -43,10 +43,12 @@ if __name__ == "__main__":
 
     doc_files=[files for files in file_names if os.path.splitext(files)[1][1:].lower() in doc_extensions]
 
+    dot_files=[files for files in file_names if os.path.splitext(files)[1] =='']
+
     other_files=[]
 
     for files in file_names:
-        if (files not in image_files) and (files not in audio_files) and (files not in video_files) and (files not in web_files)  and (files not in doc_files) and os.path.isfile(files):
+        if (files not in image_files) and (files not in audio_files) and (files not in video_files) and (files not in web_files)  and (files not in doc_files) and (files not in dot_files) and os.path.isfile(files) :
             other_files.append(files)
 
     
@@ -66,3 +68,4 @@ if __name__ == "__main__":
     file_move("Web",web_files)
     file_move("Documents",doc_files)
     file_move("Others",other_files)
+f
