@@ -33,7 +33,7 @@ if __name__ == "__main__":
     dot_extensions=['']
     #Time to get the actual files
 
-    image_files=[files for files in ile_names if os.path.splitext(files)[1][1:].lower() in img_extensions]
+    image_files=[files for files in file_names if os.path.splitext(files)[1][1:].lower() in img_extensions]
 
     audio_files=[files for files in file_names if os.path.splitext(files)[1][1:].lower() in audio_extensions]
 
@@ -68,4 +68,3 @@ if __name__ == "__main__":
     file_move("Web",web_files)
     file_move("Documents",doc_files)
     file_move("Others",other_files)
-f
